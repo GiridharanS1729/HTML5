@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader</title>
+</head>
+
+<body>
+    <div class="a"></div>
+    <div class="b" title="Loading Please wait..."></div>
+</body>
+<style>
+    :root{
+        --a:#fff;
+        --b:#242121;
+    }
+    * {
+        border-radius: 100%;
+        
+        background-color: #242121;
+        width: 200px;
+        height: 200px;
+        box-sizing: border-box;
+    }
+
+    .b {
+        width: 70px;
+        height: 70px;
+        margin-top:-75px;
+        margin-left: 6px;
+        background-color: transparent;
+        animation: b 1s linear 150ms infinite;
+        border-left: 3px ridge var(--a);
+        border-top: 3px ridge var(--a);
+        border-right: 2px solid var(--b);
+        border-bottom: 2px solid var(--b);
+    }
+
+    .a {
+        width: 80px;
+        height: 80px;
+        background-color: transparent;
+        border-top: 2px solid var(--a);
+        border-right: 2px solid var(--a);
+        border-left: 2px solid var(--b);
+        animation: a 1s linear 100ms infinite;
+        border-bottom: 2px solid var(--b);
+    }
+
+    @keyframes a {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes b {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(-390deg);
+        }
+    }
+</style>
+
+</html>

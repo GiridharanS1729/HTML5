@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="a"></div>
+</body>
+<style>
+    .a {
+        border: 10px double #bbbaba6c;
+        border-radius: 100%;
+        width: 100px;
+        height: 100px;
+        border-top: 10px ridge #8d8a8a;
+        transform: rotate(0.15turn);
+        animation: a 1s linear infinite 100ms alternate;
+    }
+
+    @keyframes a {
+        from {
+            transform: rotate(0.15turn);
+        }
+
+        to {
+            filter: drop-shadow(0px 0px 10px rgb(40, 3, 3));
+            transform: rotate(0.82turn);
+        }
+    }
+
+    * {
+        background-color: bisque;
+
+    }
+</style>
+
+</html>

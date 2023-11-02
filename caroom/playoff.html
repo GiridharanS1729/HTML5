@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Offline</title>
+    <style>
+        :root {
+            --a: rgb(240, 100, 50);
+            --b: rgb(200, 80, 50);
+            --c: brown;
+            --d: linear-gradient(45deg, rgb(255, 213, 0), #f70202);
+            --e:rgb(247, 247, 135);
+            --x: linear-gradient(0deg, #000 0%, orange 10%, orange 95%, #000 10%);
+            --y: linear-gradient(0deg, #000 0%, #00f 10%, #00f 95%, #000 10%);
+            --z: linear-gradient(0deg, #000 0%, rgb(30, 255, 0) 10%, rgb(30, 255, 0) 95%, #000 10%);
+
+        }
+
+        .main {
+            width: 7cm;
+            height: 7.5cm;
+            border-radius: 10px;
+            position: relative;
+            cursor: pointer;
+            margin: auto;
+            background-color: var(--c);
+            overflow: -moz-hidden-unscrollable;
+        }
+
+        .close {
+            position: absolute;
+            right: -2%;
+            top: -2%;
+        }
+
+        .close:hover,
+        .close:active {
+            filter: grayscale(30%);
+        }
+
+        .inner {
+            border-radius: 10px;
+            width: 6cm;
+            height: 6.5cm;
+            position: absolute;
+            margin: 20px;
+            background-color: var(--a);
+        }
+
+        .select {
+            position: relative;
+            top: 10px;
+            left: 60px;
+            font-size: 17px;
+            text-transform: capitalize;
+            font-family: arial;
+            font-weight: 600;
+            color: var(--e);
+
+        }
+
+        .inner2 {
+            width: 5cm;
+            height: 5cm;
+            border-radius: 10px;
+            position: absolute;
+            margin: 20px;
+            background-color: var(--b);
+        }
+
+        .ele {
+            position: absolute;
+            margin: 20px;
+            font-family: arial;
+            font-weight: 700;
+            gap: 10px 10px;
+            display: grid;
+            color: #fff;
+            width: 3.4cm;
+            height: 3cm;
+        }
+
+        .a,
+        .b,
+        .c {
+            color:var(--e);
+            border: 3px solid rgb(255, 136, 0);
+            border-radius: 10px;
+            padding-right: 10px;
+            padding-left: 12px;
+            padding-bottom: 0px;
+            padding-top: 10px;
+            background: var(--d);
+            width: 3.4cm;
+            height: 0.65cm;
+            margin: auto;
+            font-size: 15px;
+        }
+
+        .a {
+            background: var(--x);
+            backdrop-filter: blur(100px);
+        }
+
+        .b {
+            padding-left: 1.9cm;
+            width: 1.8cm;
+            font-size: 15px;
+            background: var(--y);
+        }
+
+        .c {
+            background: var(--z);
+
+        }
+
+        .r:active,
+        .r:hover {
+            font-size: 16px;
+            padding-left: 12px;
+            padding-right: 12px;
+            width: 3.37cm;
+            height: 0.78cm;
+        }
+
+        .b:active,
+        .b:hover {
+            font-size: 16px;
+            padding-left: 1.9cm;
+            padding-right: 12px;
+            width: 1.7cm;
+            height: 0.78cm;
+        }
+        a{
+            text-decoration: none;
+            color:var(--e);
+        }
+        iframe{
+            position: absolute;
+            overflow: hidden;
+            top:25px;
+            left:40px;
+            width:8cm;
+            height:8cm;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <span class="close">
+            <!-- <img src="close.png" alt="close" width="20" height="20" id="close"> -->
+        </span>
+        <div class="inner">
+            <div class="select">select mode</div>
+            <div class="inner2">
+                <div class="ele">
+                    <div class="r a"><a href="board.html" class="v" target="board" id="x" onclick="show()"> Disc Pool</span></div>
+                        <div class="r b"><a href="board.html" class="v" target="board" id="x" onclick="show()"> Caroom</span></div>
+                            <div class="r c"><a href="board.html" class="v" target="board" id="x" onclick="show()"> Freestyle</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    <iframe frameborder="0" name="board" id="iframe">
+        <img src="close.png" alt="close" width="20" height="20" id="close"/>
+    </iframe>
+</body>
+<script>
+    let x=document.getElementsByClassName("x");
+    let iframe=document.getElementById("iframe");
+    let main=document.getElementsByClassName("main");
+    function show(){
+        iframe.style.display="block";
+        // main.style.display="none";
+
+    }
+</script>
+
+</html>

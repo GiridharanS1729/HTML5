@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="range" id="r" value="0" min="0" max="100">
+    <p id="p"></p>
+    <div class="mo"><p id="ro"></p></div>
+</body>
+<style>
+    p {
+        border: 2px solid #f00;
+        width: max-content;
+        height: max-content;
+    }
+.r,input{
+    cursor: pointer;
+}
+    #ro {
+        width: 50px;
+        height: 50px;
+        background-color: #0f0;
+
+    }
+</style>
+<script>
+    let r = document.getElementById("r");
+    let p = document.getElementById("p");
+    let ro = document.getElementById("ro");
+    let x = 0,y=0;
+    p.innerHTML = 0;
+    r.addEventListener('input', function () {
+        x = r.value;
+        y=x*Math.PI/18;
+        p.innerHTML = x;
+        ro.style.display.height='y';
+        ro.innerHTML=y;
+        var z=y+'deg';
+        ro.style.borderRadius=y+'px';
+        // ro.style.transform='rotate(z)';
+    }, false);
+
+
+
+</script>
+
+</html>

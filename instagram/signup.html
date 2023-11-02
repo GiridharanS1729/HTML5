@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="icon" href="top.ico">
+</head>
+
+<body>
+    <form name="my" onsubmit="return n()">
+        <div class="a">
+            <br /><span class="cn">Choose username</span><br />
+            <span class="lite">&nbsp;&nbsp;<small>You can always change it later.</small></span>
+            <br /> <br /><input name="u" class="name" type="search" placeholder="Username" />
+            <br /><br />
+            <input name="p" type="password" placeholder="Password" id="pass" class="pass" />
+            <br /><br />
+            
+            <input id="bt" class="next" type="submit" value="Next" /><br />
+
+
+        </div>
+    </form>
+</body>
+<style>
+    :root {
+        --b: rgb(63, 66, 250);
+        --a: #dbd7d7;
+        
+    }
+
+    iframe{
+        border: 0px;
+    }
+
+    .a {
+        border: 10px solid #000;
+        width: fit-content;
+        margin-left: 45%;
+        height: 500px;
+        padding: 20px;
+    }
+
+    .cn {
+        font-family: 'Lucida Sans';
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    span::selection,small::selection{
+        color:none;
+        background-color: transparent;
+    }
+
+    input::selection{
+        color:#fff;
+        background-color: #000;
+    }
+    .lite {
+        font-family: lucida Sans;
+        font-weight: bold;
+        opacity: 0.5;
+    }
+
+    .name,
+    .pass {
+        padding: 4px;
+        border: 1px solid var(--a);
+        border-radius: 5px;
+        background-color: var(--a);
+        font-size: 1.3rem;
+    }
+
+    .pass{
+        display: none;
+    }
+    .next {
+        width: 260px;
+        border: 1px solid var(--b);
+        border-radius: 5px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        height: 40px;
+        opacity: 0.5;
+        background-color: var(--b);
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .next:hover {
+        opacity: 1;
+        background-color: var(--b);
+        border: 1px solid var(--b);
+    }
+</style>
+<script>
+
+    function n() {
+        let pa = document.getElementById("pass");
+        let c=0;
+        let f = document.forms["my"];
+        
+        if (f.u.value.length <= 6) {
+            alert("Username should be greater than 6 letters");
+            c=1;
+            return false;
+        }
+        if(document.getElementById("pass").style.display!="block"){
+        if((f.u.value.length > 6)){
+            document.getElementById("pass").style.display="block";
+            c=1;
+            return false;
+        }}
+         
+        if(f.p.value.length<8){
+            alert("Password should be greater than 8 Letters.");
+            c=1;
+            return false;
+        }
+        if((f.u.value.length > 6)&&(f.p.value.length>8)){
+            window.open("end.html");
+            return true;
+         } 
+    }
+        
+    
+</script>
+
+</html>

@@ -1,0 +1,51 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+</head>
+<body>
+    <div class="a">
+        <!-- <input type="range" onchange="h()" name="r" id="r" min="1" max="10" step="1" value="4"/>
+        <p id="k">o</p> -->
+    </div>
+    <!-- <div class="in"></div> -->
+<style>
+    .a{
+        width:1500px;
+        height:800px;
+        background:#bab7b7;
+        /* animation:b 100ms linear infinite; */
+    }
+    .a:hover{
+        animation:b 0.1s linear infinite;
+        /* animation:b 3s linear 1; */
+    }
+    @keyframes b{
+        0%,100%{background-color: #f00;}
+        33%{background-color: #0f0;}
+        66%{background-color: #00f;}
+    }
+    #r{
+        background-color: black;
+        position: absolute;
+        /* top:100; */
+        /* left:100; */
+    }
+    #k{
+        color: aliceblue;
+        font-size: 30px;
+    }
+</style>
+</body>
+<script rel="jquery">
+    let a=document.getElementById("a");
+    let r=document.getElementById("r");
+    let k=document.getElementById("k");
+    let va;
+function h(){
+        va=((r.value)*100);
+        k.innerHTML=va;
+        a.style.animationDuration="${va}ms";
+}
+</script></html>

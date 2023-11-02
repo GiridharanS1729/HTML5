@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Image Opacity Changer</title>
+</head>
+<style>
+    .c {
+        width: max-content;
+        height: max-content;
+    }
+    #r {
+        color: #00f;
+        background-color: #00f;
+    }
+    input[type=range]::-webkit-slider-runnable-track {
+        background: #ff0;
+        border-radius: 10px;
+        border: 2px dashed #f00;
+        cursor: pointer;
+    }
+    input[type=range]::-webkit-slider-thumb {
+        cursor: pointer;
+        color: #00f;
+    }
+    .l {
+        font-size: larger;
+        color:#f0f;
+        display: inline-flex;
+    }
+    h1 {
+
+        cursor: none;
+        border:1px ridge #000;
+        font-variant: small-caps;
+    }
+    div {
+        text-transform: capitalize;
+    }
+    img{
+        border-radius: 25px;
+        cursor:zoom-in;
+    }
+    .all{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="all">
+    <h1 align="center">
+        change opacity
+    </h1>
+    <form>
+        <input title="Move Slider to change opacity" type="range" id="r" min="0" max="100" value="100" onmousemove="x()"><br />
+        <div class="l">range :
+            <div id="i" class="c" name="ra"></div>
+        </div>
+        <br />
+        <div class="l">opacity : <div id="j" class="c"></div>
+        </div>
+        <br /><br/>
+        <img id="img" class="aac" src="https://t3.ftcdn.net/jpg/02/70/35/00/360_F_270350073_WO6yQAdptEnAhYKM5GuA9035wbRnVJSr.jpg" title="GIRIDHARAN" width="150"></img><br />
+    </form>
+    </div>
+</body>
+<script>
+    let d = 0;
+    let r = document.getElementById('r');
+    let rang = document.getElementById('i');
+    let op = document.getElementById('j');
+    let b = document.getElementById('b');
+    let cf = document.getElementById('cf');
+    rang.innerHTML=100+"%";
+    op.innerHTML="1.0";
+    function x() {
+        rang.innerHTML = r.value+"%";
+        opval = (r.value) / 100;
+        if(opval==1||opval==0){op.innerHTML=opval+".00"}
+        else{op.innerHTML = opval;}
+        img.style.opacity = opval;
+    }
+</script>
+
+</html>

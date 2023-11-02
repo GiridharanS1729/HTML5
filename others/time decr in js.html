@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+</head>
+
+<body>
+    <p id="time"></p>
+</body>
+<style>
+    body {
+        display: flex;
+    }
+</style>
+<script>
+    let st=setInterval(cc, 1000)
+    x = 61
+    y = 60
+    z = 24
+    function cc() {
+        if (x >= 0) {
+            x = x - 1;
+        }
+        if (x == 0) {
+            y = y - 1;
+            x = 61;
+        }
+        if (y == 0) {
+            y = 60;
+            z--;
+        }
+        if(z==1&&y==1&&x==1){
+            clearInterval(st)
+            return 0;
+        }
+        x1=check(x-1)
+        y1=check(y-1)
+        z1=check(z-1)
+        time.innerHTML = (z1).toString() + "hrs " + (y1).toString() + "min " + (x1).toString() + "sec";
+
+    }
+    function check(c) {
+        copy=c.toString();
+        if(copy.length==1){
+            copy="0"+copy;
+        }
+        return copy;
+    }
+</script>
+
+</html>

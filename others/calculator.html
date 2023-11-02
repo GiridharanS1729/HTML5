@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc</title>
+</head>
+
+<body>
+    <fieldset class="ff" >
+        <h1>CALCULATOR</h1>
+        <form class="main" name="calc" ::selection>
+            <div class="sp">
+                <div class="spa">
+                    <div class="inf">
+                        &nbsp;&nbsp;
+                        <input id="out" class="out" name="txt" readonly type="text" placeholder="1234567890" />
+
+                    </div>
+                    <input class="out" name="t" id="out" readonly type="text" placeholder="Answer" value="0" />
+                </div>
+            </div>
+            <div class="m"><span class="s"></span>
+                <span class="a" onclick="calc.txt.value+='1'"><i>1</i></span>
+                <span class="s"></span>
+                <span class="b" onclick="calc.txt.value+='2'"><i>2</i></span><span class="s"></span>
+                <span class="c" onclick="calc.txt.value+='3'"><i>3</i></span><span class="s"></span>
+                <div class="r" onclick="calc.txt.value=''" style="font-size: 14px;">CLEAR</div><span class="s"></span>
+                <span class="s"></span>
+            </div>
+            <div class="n"><span class="s"></span>
+                <div class="x" onclick="calc.txt.value+='4'">4</div><span class="s"></span>
+                <div class="y" onclick="calc.txt.value+='5'">5</div><span class="s"></span>
+                <div class="z" onclick="calc.txt.value+='6'">6</div><span class="s"></span>
+                <div class="i" onclick="calc.txt.value+='+'">+</div><span class="s"></span>
+            </div>
+            <div class="o"><span class="s"></span>
+                <div class="g" onclick="calc.txt.value+='7'">7</div><span class="s"></span>
+                <div class="i" onclick="calc.txt.value+='8'">8</div><span class="s"></span>
+                <div class="g" onclick="calc.txt.value+='9'">9</div><span class="s"></span>
+                <div class="i" onclick="calc.txt.value+='-'">–</div><span class="s"></span>
+            </div>
+            <div class="o"><span class="s"></span>
+                <div class="i" onclick="calc.txt.value+='/'">÷</div><span class="s"></span>
+                <div class="i" onclick="calc.txt.value+='0'">0</div><span class="s"></span>
+                <div class="g" onclick="calc.txt.value+='*'">×</div><span class="s"></span>
+                <div class="r" style="color:#fffefe;background-color:#00f;border-color:#00f;"
+                    onclick="document.calc.t. value=eval(calc.txt.value)">=</div>
+
+            </div>
+        </form>
+    </fieldset>
+</body>
+<style>
+    :root {
+        --b: #474646;
+        --l: #0fe9f9;
+        --w: #dbd9d9;
+        --i: #182d1e;
+        --o: rgb(38, 38, 38);
+    }
+
+    H1 {
+        color: #fff;
+        margin-left: 20px;
+    }
+
+    .s {
+        width: 10px;
+    }
+
+    body {
+        background-color: black;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+fieldset{
+    width:fit-content;
+    border: 10px groove #a9a5a5;
+}
+form::selection{
+    color: rgb(205, 186, 186);
+    background-color: rgb(41, 43, 41);
+}
+    .inf {
+        width: 100%;
+        border-collapse: separate;
+        display: inline-flex;
+    }
+
+    #out {
+        border: 1px solid #121212;
+        margin-top: 4px;
+        border-radius: 3px;
+    }
+
+
+    #in {
+        border-radius: 3px;
+        width: 100%;
+    }
+
+    .sp {
+        text-align: end;
+        font-weight: 700;
+        letter-spacing: 2px;
+        width: 90%;
+        font-family: Tahoma;
+        margin: 9px;
+        height: 30%;
+        border-radius: 10px;
+        border: 2px solid var(--w);
+        background-color: var(--i);
+    }
+
+    .spa {
+        margin: 5px;
+        width: 95%;
+        margin-top: 3px;
+        height: 90%;
+        background-color: var(--i);
+    }
+
+    .in {
+        background-color: var(--i);
+        color: var(--w);
+        font-size: 20px;
+        text-align: end;
+        width: 100%;
+        justify-content: center;
+        margin: auto;
+        border: 1px solid #fff;
+    }
+
+    .out {
+        background-color: var(--i);
+        color: var(--w);
+        font-size: 20px;
+        text-align: end;
+        width: 92%;
+        justify-content: center;
+        margin: auto;
+        border: 1px solid #fff;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    .main {
+        width: 265px;
+        color: var(--w);
+        font-family: Lucida Sans;
+        height: 220px;
+        background-color: var(--b);
+        border: 2px solid var(--w);
+        border-radius: 2%;
+    }
+
+    .m,
+    .n,
+    .o {
+        display: inline-flex;
+        border-spacing: 20px;
+    }
+
+    .a,
+    .b,
+    .c {
+        width: 50px;
+        height: 25px;
+        border: 2px solid var(--w);
+    }
+
+    .x,
+    .y,
+    .z {
+        width: 50px;
+        height: 25px;
+        border: 2px solid var(--w);
+    }
+
+    .g,
+    .i,
+    .r {
+        width: 50px;
+        height: 25px;
+        border: 2px solid var(--w);
+    }
+
+    .a,
+    .b,
+    .c,
+    .x,
+    .y,
+    .z,
+    .g,
+    .i {
+        font-weight: 500;
+        text-align: center;
+        border-radius: 10%;
+        cursor: pointer;
+        border-right-width: 3px;
+        border-color: var(--o);
+        border-right-color: var(--o);
+        box-shadow: 3px 3px var(--o);
+    }
+
+    .a:hover,
+    .b:hover,
+    .c:hover,
+    .x:hover,
+    .y:hover,
+    .z:hover,
+    .g:hover,
+    .i:hover {
+        font-weight: 500;
+        text-align: center;
+        border-right-width: 2px;
+        border-right-color: var(--o);
+        border-color: var(--o);
+        border-radius: 10%;
+        box-shadow: 1.5px 1.5px var(--o);
+    }
+
+    .r {
+        border-right-width: 3px;
+        font-weight: 500;
+        border-radius: 10%;
+        text-align: center;
+        cursor: pointer;
+        color: #a3e8f6;
+        background-color: #f00;
+        border-right-color: #ff5858;
+        border: 2px solid #f00;
+        box-shadow: 3px 3px var(--o);
+    }
+
+    .r:hover {
+        border-radius: 10%;
+        box-shadow: 1.5px 1.5px var(--o);
+    }
+</style>
+
+</html>

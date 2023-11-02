@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title>FeedBack</title>
+</head>
+
+<body>
+    <form id="a" method="post" name="f" onsubmit="return h()" >
+        <center>
+    <textarea id="ta" width="40px" name="k" rows="20" placeholder="Write Your FeedBack Here..."></textarea>
+    <br /><br />
+        <input type="Submit" id="s" value="Submit" />
+    </center></form>
+</body>
+
+<style>
+    #ta {
+        color: #0ff;
+        background-color: #aaa;
+        border: 3px solid #f00;
+        width: 10cm;
+        border-radius: 20px;
+    }
+
+    textarea[placeholder] {
+        font-size: 20px;
+    }
+
+    #s:hover {
+        color: #fff;
+        border-radius: 20px;
+        font-size: 20px;
+        opacity: 1;
+        box-shadow: 0px 0px 5px 5px #000;
+        background-color: #f00;
+    }
+.a{
+    margin-left:450px;
+}
+    #s {
+        color: #fff;
+        border-radius: 20px;
+        font-size: 20px;
+        background-color: #f00;
+        border-radius: 17px;
+        box-shadow: 0px 0px 30px 7px #aaa;
+        opacity: 0.5;
+    }
+</style>
+
+<script>
+let f=document.forms["f"];
+    function h() {
+        if (f.k.value.length <= 1) {
+            alert("please enter a feedback");
+            return false;
+        }
+        else {
+            alert("Sucessfully Submitted");
+            return true;
+        }
+        return false;
+    }
+</script>
+
+</html>

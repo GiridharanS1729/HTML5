@@ -1,0 +1,50 @@
+<html><head><title>about me</title></head><body>
+<div class="a">Software Developer</div><br/>
+<div class="b"><details><summary>Experience</summary>
+<ul><li>&nbsp;Software Developer in <span>Wipro</span> for <span>2</span> Years</li>
+<li>&nbsp;Full Stack Developer in <span>Infosys<span> for <span>3</span> Years</li></ul>
+</details>
+
+</div></body><style>
+.a{
+font-size:70px;
+color:#f00;
+stroke-width:5px;
+stroke-linecap:round;
+stroke-color:#0ff;
+}
+
+summary::marker{
+    content: "🧑‍💻";
+}
+
+summary{
+color:rgb(255, 176, 17);
+cursor: pointer;
+}
+
+span{
+color:#0dd;
+font-family:poppins;
+}
+
+li{
+list-style-type:square;
+list-style-image:linear-gradient(to bottom,orange,white,green);
+}
+/*li::marker{
+    content: "🏳️‍🌈";
+}*/
+.b{
+color:#0ff;
+font-size:40px;
+}
+
+body{animation:b 2s ease-in infinite;
+border-radius:8px;height:80%;padding-left:5px;}
+@keyframes b{
+0%{border:5px inset #00f;}
+50%{border:5px inset #0f0;}
+100%{border:5px inset #f00;}
+}
+</style></html>

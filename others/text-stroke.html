@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clip</title>
+</head>
+
+<body>
+    <p class="a">GIRI</p>
+</body>
+<style>
+    * {
+        background: #f00;
+    }
+
+    .a {
+        background: url(m.png);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        filter: drop-shadow(3px 3px 5px rgb(238, 176, 182));
+        font-size: 150px;
+        background-repeat: no-repeat;
+    }
+</style>
+
+</html>

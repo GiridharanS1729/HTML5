@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board</title>
+    <style>
+        :root {
+            --b: radial-gradient(#454444 45%, rgb(144, 78, 78) 50%);
+            --a: linear-gradient(45deg, #f3fb5c, #f77676);
+        }
+
+        .main {
+            width: 6cm;
+            height: 6cm;
+            border: 5px solid #f00;
+            border-radius: 20px;
+            position: relative;
+            cursor: pointer;
+            background-color: brown;
+        }
+
+        .inner {
+            width: 5.77cm;
+            position: relative;
+            height: 5.77cm;
+            border: 5px solid brown;
+            border-radius: 15px;
+
+        }
+
+        .board {
+            border-radius: 10px;
+            width: 219px;
+            height: 219px;
+            position: relative;
+            top: 0px;
+            left: 0px;
+
+        }
+
+        .bo {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #000;
+            background-color: #000;
+            border-radius: 100%;
+            position: absolute;
+        }
+
+        .a {
+            top: 0px;
+        }
+
+        .b {
+            right: -1px;
+            top: -1px;
+        }
+
+        .c {
+            bottom: -2px;
+            left: 0px;
+        }
+
+        .d {
+            bottom: -2px;
+            right: -3px;
+        }
+
+        .coins {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+        }
+
+        .c1,
+        .c3,
+        .c4,
+        .c5,
+        .c7,
+        .c9,
+        .c11 {
+            background: var(--a);
+            border: 1px solid #000;
+        }
+
+        .c2,
+        .c4,
+        .c6,
+        .c8,
+        .c10,
+        .c12 {
+            background: var(--b);
+            border: 1px solid #000;
+        }
+
+        .c1 {
+            top: 92px;
+            left: 88px;
+        }
+
+        .c2 {
+            top: 92px;
+            left: 100px;
+        }
+
+        .c3 {
+            top: 102px;
+            left: 92px;
+        }
+
+        .c4 {
+            top: 112px;
+            left: 99px;
+        }
+
+        .c5 {
+            top: 121px;
+            left: 104px;
+        }
+
+        .c6 {
+            top: 112px;
+            left: 122px;
+        }
+
+        .c7 {
+            top: 112px;
+            left: 111px;
+        }
+
+        .c8 {
+            top: 102px;
+            left: 116px;
+        }
+
+        .c9 {
+            top: 92px;
+            left: 110px;
+        }
+
+        .c10 {
+            top: 82px;
+            left: 105px;
+        }
+
+        .c11 {
+            top: 93px;
+            left: 122px;
+        }
+
+        .c12 {
+            top: 112px;
+            left: 88px;
+        }
+
+        .red {
+            top: 103px;
+            left: 104px;
+            width:11px;
+            height:11px;
+            background-color: #f00;
+        }
+
+        .striker {
+            width: 12px;
+            height: 12px;
+            background-color: #f3fb5c;
+            border-radius: 100%;
+            border:1px solid rgb(126, 126, 3);
+            position: absolute;
+            top:183px;
+            left:100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="inner">
+            <img src="board.png" alt="board" class="board" />
+            <div class="bo a"></div>
+            <div class="bo b"></div>
+            <div class="bo c"></div>
+            <div class="bo d"></div>
+            <div class="coins c1"></div>
+            <div class="coins c2"></div>
+            <div class="coins c3"></div>
+            <div class="coins c4"></div>
+            <div class="coins c5"></div>
+            <div class="coins c6"></div>
+            <div class="coins c7"></div>
+            <div class="coins c8"></div>
+            <div class="coins c9"></div>
+            <div class="coins c10"></div>
+            <div class="coins c11"></div>
+            <div class="coins c12"></div>
+            <div class="coins red"></div>
+            <img src="coin.png" class="striker"></div>
+        </div>
+    </div>
+</body>
+
+</html

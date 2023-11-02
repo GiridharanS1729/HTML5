@@ -1,0 +1,304 @@
+<html>
+
+<head>
+  <title>Instagram</title>
+  <link rel="stylesheet" type="text/css" href="instastyle.css"/>
+  <link rel="icon" href="top.ico">
+</head>
+
+<body>
+  <div id="wrapper">
+    <div class="main-content" id="w">
+      <div class="header">
+        <img src="insta.png" />
+      </div>
+      <form name="f" onsubmit="return log()" method="get">
+        <div class="l-part">
+          <input type="text" name="u" placeholder="Username" id="a" class="input-1" />
+          <div class="overlap-text">
+            <input type="password" name="p" placeholder="Password" id="a" class="input-2" />
+
+          </div>
+          <input type="submit" id="login" value="Log in" class="btn" />
+        </div>
+      </form>
+
+      <div>
+        <pre>
+                  <a href="#" class="fp">Forgot Password?</a></pre>
+      </div>
+
+
+      <div class="m"><span class="or">(OR)</span><br /><br />
+        <span class="fb">
+          <img src="fb.png" class="kij" width="15" height="15" alt="facebook" />
+          Log in with Facebook</span>
+      </div>
+    </div>
+    <div class="sub-content">
+      <div class="s-part">
+        Don't have an account?&nbsp;<a href="signup.html" class="ni">Sign up</a>
+      </div>
+    </div>
+    <div class="x">
+      <a href="https://play.google.com/store/apps/details?id=com.instagram.android&hl=en_IN&gl=US" rel="nofollow">
+        <img src="gplay.png" class="i1" width="100" height="50" alt="google playstore" />
+      </a>
+      <a href="https://www.microsoft.com/store/productId/9NBLGGH5L9XT" rel="nofollow">
+        <img src="msstore.png" class="i1" width="100" height="50" alt="microsoft store" />
+      </a>
+    </div>
+
+
+</body>
+
+
+<style>
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .i1 {
+    width: 110px;
+    height: 35px;
+    border-radius: 5px;
+  }
+
+  #w:hover {
+    box-shadow: 0px 0px 10px 3px #555;
+  }
+
+  .i1:hover {
+    box-shadow: 0px 0px 10px 3px #555;
+  }
+
+  body {
+    background-color: #eee;
+  }
+
+  #wrapper {
+    width: 500px;
+    height: 70%;
+    border-radius: 10px;
+    border: 1px solid #000;
+    overflow: hidden;
+    border: 0px solid #000;
+    margin: 50px auto;
+    padding: 10px;
+  }
+
+  .main-content {
+    width: 250px;
+    height: 63%;
+    margin: 10px auto;
+    background-color: #fff;
+    border: 2px solid #e6e6e6;
+    padding: 40px 50px;
+  }
+
+  .header {
+    border: 0px solid #000;
+    margin-bottom: 5px;
+  }
+
+  .header img {
+    height: 125px;
+    width: 135px;
+    border-radius: 30px;
+    margin: auto;
+    position: relative;
+    left: 50px;
+    bottom: 2px;
+  }
+  a{
+    text-decoration: none;
+  }
+
+  .header img:hover {
+    width: 134px;
+    height: 124px;
+    box-shadow: 0px 0px 2px 2px #fb99d9;
+    border: 1px ridge #fb99d9;
+    cursor: zoom-in;
+  }
+
+  .input-1,
+  .input-2 {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 8px 12px;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    border-radius: 3px;
+  }
+
+  .overlap-text {
+    position: relative;
+  }
+
+  .overlap-text a {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    color: #003569;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: 'Overpass Mono', monospace;
+    letter-spacing: -1px;
+  }
+
+  .btn,
+  .btn:active,
+  .btn:visited {
+    width: 100%;
+    background-color: #54a7f4;
+    border: 1px solid #4fa2ef;
+    padding: 5px 12px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  .btn:hover {
+    background-color: #158dfe;
+    border: 1px solid #0f85f4;
+  }
+
+
+  .sub-content {
+    width: 250px;
+    height: auto;
+    margin: 10px auto;
+    border: 1px solid #e6e6e6;
+    padding: 20px 50px;
+    background-color: #fff;
+  }
+
+  .s-part {
+    text-align: center;
+    font-family: 'Overpass Mono', monospace;
+    word-spacing: -3px;
+    letter-spacing: -2px;
+    font-weight: normal;
+  }
+
+  .s-part a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #3897f0;
+    font-family: 'Overpass Mono', monospace;
+    word-spacing: -3px;
+    letter-spacing: -2px;
+    font-weight: normal;
+  }
+
+  #a:focus {
+    color: #fff;
+    background-color: rgb(187, 187, 183);
+  }
+
+  .l-part {
+    padding-top: 20%;
+
+  }
+
+  #a:hover {
+    box-shadow: 0px 0px 2px 1px #000;
+  }
+
+  .x {
+    padding-left: 70px;
+    margin-top: -12px;
+    background-color: #fff;
+    width: 280px;
+    text-decoration: none;
+    padding-bottom: 10px;
+    border-color: transparent;
+    margin-left: 75px;
+  }
+
+  .x img:hover {
+    border-radius: 5px;
+  }
+
+  .fp {
+    cursor: help;
+    color: #54a7f4;
+    font-weight: 900;
+    text-decoration: none;
+  }
+
+  .fp:hover {
+    color: #0683f8
+  }
+
+  .ni:hover {
+    color: #0475de
+  }
+
+  .fb:hover {
+    background-color: #0683f8;
+  }
+
+  .or {
+    font-weight: 900;
+    margin-bottom: 10px;
+    font-size: 12px;
+    padding-left: 100px;
+    font-family: 'Lucida Sans';
+  }
+
+  .fb img {
+    border: 1px solid #fff;
+    border-radius: 50%;
+  }
+
+  .fb {
+    font-size: 15px;
+    border: 1px solid #4fa2ef;
+    background-color: #4fa2ef;
+    color: #eee;
+    font-weight: bold;
+    font-family: 'Lucida Sans';
+    border-radius: 3px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+  }
+</style>
+
+
+<script>
+
+  let f = document.forms["f"];
+  function log() {
+
+    if (f.u.value.length <= 4) {
+      alert("username should be greater than 4");
+      return false;
+    }
+
+
+    if (f.p.value.length <= 6) {
+      alert("password should be greater than 6");
+      return false;
+    }
+
+
+    else {
+      window.open("end.html");
+      //alert("Succcessfully Logged In ✅");
+      return true;
+    }
+  }
+
+  function h() {
+    alert("Succcessfully Logged In ✅");
+  }
+</script>
+
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3;url='.\home\home.html'">
+    <title>Caroom disc pool</title>
+</head>
+
+<body onload="h()">
+    <div class="main">
+        <pre><div class="off"><a href="playoff.html" target="po" id="poff">Play Offline <img src="boy.png" width="10" height="10" alt="no"/></a></div></pre>
+        <br />
+        <div class="u">
+            <center>
+                <div class="u2"><span class="car">CAROOM </span><br /><span class="p">Pool</span></div>
+            </center>
+        </div>
+        <div class="o">
+            <div class="i1">
+                <div class="i2"></div>
+            </div>
+            <div class="com">
+                <div class="ca">
+                    <img src="ava.png" width="70" height="70" class="img" onclick="ava()">
+                    <span class="cap">giridharan s</span>
+                </div>
+                <div clas="none">
+                    <img class="star" src="star.png" width="30" height="30" />
+                    <span class="lev">90</span>
+                </div>
+
+            </div>
+        </div>
+        <div class="conect">
+            <div class="spin"></div>
+            <img class="coi" src="coin.png" width="24" height="24">
+            <span class="load">connecting...</span>
+        </div>
+        <div align="center" class="tp"><span id="tip"></span></div>
+
+        <iframe id="iframe" name="po"></iframe>
+        <img src="close.png" alt="close" width="20" height="20" id="close">
+    </div>
+</body>
+<script>
+    var ran = [];
+    ran.length = 11;
+    ran[0] = "Weekly leaderboards reward top player with gems or coins"
+    ran[1] = "Legendary strikers can be acquired through Caroom Pass only"
+    ran[2] = "Win matches to win chests"
+    ran[3] = "Chests reward you with gems, coins, pucks and strikers"
+    ran[4] = "Collect enough pieces of a striker to enable its upgrade"
+    ran[5] = "Lucky shot gives you the chance to win big rewards"
+    ran[6] = "Non facebook friends can be removed using edit option in friends menu"
+    ran[7] = "Speed-up chest unlocking by watching a video ad"
+    ran[8] = "Login with a social network to secure your game progress"
+    ran[9] = "Find the latest avatars and frames in the profile menu"
+    ran[10] = "Upgrading a strike improves its stats"
+    function h() {
+        let ans = Math.round(Math.random() * 10);
+        let r = ran[ans];
+        tip.innerHTML = "Tip:" + r;
+        return false;
+    }
+    var avatar = document.getElementsByClassName("ca");
+    function ava() {
+        avatar.style.width = 150;
+        avatar.style.height = 150;
+        alert("clicked");
+    }
+    let iframe = document.getElementById("iframe");
+    let offline = document.getElementById("poff");
+    let close = document.getElementById("close");
+    let man = document.getElementsByClassName("main");
+    poff.addEventListener("click", function () {
+        iframe.style.display = "block";
+        close.style.display = "block";
+    }, false);
+    close.addEventListener("click", function () {
+        iframe.style.display = "none";
+        close.style.display = "none";
+    }, false);
+
+
+</script>
+<style>
+    :root {
+        --a: radial-gradient(rgb(245, 109, 50), rgb(253, 115, 36), rgb(248, 94, 18), rgb(181, 68, 2));
+    }
+
+    body {
+        background-color: #fff;
+        /* cursor: none; */
+    }
+    
+    .main {
+        border-radius: 10px;
+        width: 300px;
+        height: 500px;
+        padding: 0px;
+        cursor: pointer;
+        background-image: radial-gradient(rgb(245, 109, 50), rgb(253, 115, 36), rgb(248, 94, 18), rgb(181, 68, 2) 55%);
+        resize:both;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    #iframe {
+        border: none;
+        display: none;
+        height: 350px;
+        width: 350px;
+        margin-left: -30px;
+        position: absolute;
+        top: 130px;
+    }
+
+    #close {
+        position: absolute;
+        left: 272.5px;
+        top: 132px;
+        display: none;
+    }
+
+    #close:hover {
+        filter: grayscale(0.5);
+    }
+
+    .tp {
+        font-size: 11px;
+        font-family: arial;
+        color: #fbfcfb;
+        align-items: center;
+        position: absolute;
+        width: 300px;
+        height: max-content;
+        padding-top: 2px;
+        background-color: rgb(10, 10, 10, 0.3);
+    }
+
+    .img {
+        border: 3px double rgb(190, 100, 3);
+        box-shadow: 0px 3px 5px 1px rgb(181, 68, 2);
+        width: 70px;
+        height: 70px;
+        border-radius: 5px;
+        cursor: zoom-in;
+        filter: saturate(2) brightness(1) drop-shadow(2 2 3 #fff);
+    }
+
+    .com {
+        align-items: center;
+        margin: 100px;
+        justify-content: center;
+
+    }
+
+
+    .o {
+        position: relative;
+        margin-left: 10px;
+    }
+
+    .star {
+        filter: drop-shadow(2 2 3px #fff);
+        padding-left: 60px;
+        margin-top: -190cm;
+        margin-bottom: 93px;
+    }
+
+    .lev {
+        font-family: arial;
+        color: #ff0;
+        font-weight: 700;
+        font-size: 6.2px;
+        margin-top: -98px;
+        margin-left: -19.5px;
+        position: absolute;
+
+    }
+
+    .u {
+        text-align: center;
+        font-family: cursie;
+        color: #ff0;
+        font-size: 25px;
+        -webkit-text-stroke-color: #ff0;
+        -webkit-text-stroke-width: 1px;
+    }
+
+    .cap {
+        font-size: 9.5px;
+        text-transform: uppercase;
+        font-family: arial;
+        font-weight: 900;
+        opacity: 0.9;
+        color: #fff;
+        animation: name 5s linear infinite;
+        filter: drop-shadow(2px 2px 2px #e0a372);
+    }
+
+    .load {
+        color: #fff;
+        text-transform: capitalize;
+        font-size: 10px;
+        font-family: arial;
+        font-weight: 500;
+        text-shadow: 0px 0px 2px #000;
+        position: absolute;
+        margin-top: 10px;
+        margin-left: -30px;
+
+    }
+
+    @keyframes name {
+
+        0%,
+        100% {
+            color: #ff0;
+        }
+
+        50% {
+            color: #fff;
+        }
+
+
+    }
+
+    .car {
+        background: radial-gradient(#ec26c4d6, #9d03aec1, #8003aec4);
+        padding-left: 8px;
+        padding-right: 8px;
+        text-align: center;
+        justify-content: center;
+        border: 2px ridge gold;
+        border-radius: 35%;
+        -webkit-text-stroke-color: rgb(213, 213, 5);
+    }
+
+    .u2 {
+        cursor: no-drop;
+    }
+
+    .p {
+        color: rgb(246, 62, 6);
+        font-size: 30px;
+        -webkit-text-stroke-color: #fff;
+        -webkit-text-stroke-width: 1px;
+        font-family: rockwell;
+        position: absolute;
+        margin-left: -31px;
+        margin-top: -11px;
+        text-transform: capitalize;
+    }
+
+    .off {
+        cursor: pointer;
+        color: #fff;
+        border: 2px solid rgb(247, 87, 7);
+        text-align: center;
+        width: 95px;
+        padding: 2px;
+        font-family: Arial;
+        -webkit-text-stroke: 0.2mm #fff;
+        border-radius: 3px;
+        margin-left: 195px;
+        background-image: linear-gradient(to top, rgb(243, 105, 6), rgb(210, 74, 5), rgb(239, 102, 4));
+    }
+
+    .conect {
+        position: absolute;
+        margin-left: 130px;
+        margin-top: -60px;
+
+    }
+
+    .spin {
+        width: 25px;
+        height: 25px;
+        border-radius: 100%;
+        border: 4px ridge #fff;
+        border-top-color: transparent;
+        animation: co 1s linear infinite;
+    }
+
+    .coi {
+        position: relative;
+        top: -28px;
+        left: 4.8px;
+    }
+
+    @keyframes co {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+</html>

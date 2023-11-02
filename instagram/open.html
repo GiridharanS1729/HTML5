@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3;url='instagram.html'">
+    <title>Loading</title>
+    <link rel="icon" href="top.ico">
+</head>
+
+<body>
+    <div class="v">
+        <img class="i" src="insta.png" width="150" height="150" alt="instagram" />
+        <div class="a"><img src="name.png"><br />
+            <div class="f">from</div>
+            
+            <span class="m"><img class="m" src="meta.png"></span>
+        </div>
+    </div>
+</body>
+<style>
+    .f{
+        color:#f30996;
+        font-weight: 250;
+        font-size:28px;
+        margin-bottom: 20px;
+        font-family:verdana;
+        margin-left: 90px;
+    }
+    .m{
+        color:#fba2f4;
+        width:110px;
+        margin-top: -20px;
+        margin-left: 35px;
+        height:40px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .v {
+        animation: s 1s linear 1;
+    }
+
+    @keyframes s {
+
+        0%,
+        90% {
+            display: none;
+            width:10px;
+            heiight:30px;
+            opacity: 0;
+        }
+
+        100% {
+            display: block;
+            opacity: 1;
+            width:max-content;
+            height: max-content;
+        }
+    }
+
+    .a {
+        font-size: 30px;
+        font-family: cursive;
+        color: rgb(255, 77, 222);
+        font-weight: 900;
+        align-items: center;
+        margin-left: 550px;
+        margin-top: 100px;
+        justify-content: center;
+    }
+
+    .i {
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #f0f;
+        border-radius: 22%;
+        margin-left: 600px;
+        margin-top: 200px;
+    }
+</style>
+
+</html>

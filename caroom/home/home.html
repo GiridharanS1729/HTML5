@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+</head>
+
+<body>
+    <div class="main">
+        <div id="nav">
+            <div id="img">
+                <img src="profile.png" alt="" id="prof">
+            </div>
+            <div id="settings">
+                <img src="settings.png" alt="no" class="img">
+            </div>
+            <div id="msg">
+                <img src="message.png" class="img">
+            </div>
+            <div id="gap"></div>
+            <div class="two">
+                <div id="gems">
+                    <img src="gem.png" id="gem" class="img">
+                    <span class="gem">290</span>
+                    <img src="plus.png" id="plus" class="img">
+                </div>
+                <div id="coins">
+                    <img src="coin.png" id="coin" class="img">
+                    <span class="coin"> 753 948 </span>
+                    <img src="plus.png" id="plus" class="img">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="top">
+            <div id="reward">
+                <span id="a">free rewards</span>
+                <br>
+                <span id="b">Collect Now!</span>
+            </div>
+            <div id="lucky">
+                <span id="a">lucky shot</span>
+                <br>
+                <span id="b">in <span id="time"></span></span>
+            </div>
+            <div id="leaderboard">
+                <span id="a">leaderboards</span>
+                <br>
+                <span id="b">Ends in: 3d 21h 14m</span>
+            </div>
+        </div>
+
+        <div id="gift"><img src="gift.png" alt="" class="gift"></div>
+        <div id="daily"><img src="daily.png" alt="" class="daily"></div>
+        <div id="logo"><img src="color-logo.png" alt="" class="logo"></div>
+        <div id="mode">
+            <div class="modegroup">
+                <div id="disc">play <br>disc pool</div>
+                <div id="caroom">play <br>carrom</div>
+                <div id="freestyle">play <br>freestyle</div>
+            </div>
+        </div>
+        <div id="chests">
+            <div id="c1">
+                <span id="chest">
+                    chest <br>slot
+                </span>
+            </div>
+            <div id="c2">
+                <span id="chest">
+                    chest <br>slot
+                </span>
+            </div>
+            <div id="c3">
+                <span id="chest">
+                    chest <br>slot
+                </span>
+            </div>
+            <div id="c4">
+                <span id="chest">
+                    chest <br>slot
+                </span>
+            </div>
+        </div>
+        <div id="bottom">
+            <div id="home">
+                <img src="home.png" alt="" class="home">
+                home
+            </div>
+            <div id="friends">
+                <img src="friends.png" alt="" class="friends" id="bot">
+                friends
+            </div>
+            <div id="equipment">
+                <img src="equip.png" alt="" class="equipment" id="bot">
+                equipment
+            </div>
+            <div id="events">
+                <img src="events.png" alt="" class="events" id="bot">
+                events
+            </div>
+            <div id="shop">
+                <img src="shop.png" alt="" class="shop" id="bot">
+                shop
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    :root {
+        --a: #9e2a03;
+        --b: #d44203;
+        --c: #fa5b1c;
+        --d: #f98724;
+        --blue1: #1c03fa;
+        --blue2: #5c48f9;
+        --green1: #0fc203;
+        --green2: #49fb46;
+        --orange1: #ffa500;
+        --orange2: #fcb73f;
+        --box1: #e68b04;
+        --box2: #f8ba7c;
+        --nv: #d5af5d;
+        --nv2: #755104;
+        --imgout:rgb(239, 227, 179);
+        --border1: #f07f06;
+        --border2: #8e3c01;
+        --bot1:#ac4e02;
+        --bot2:#f0da77;
+    }
+
+    * {
+        text-transform: capitalize;
+        font-family: arial;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    body {
+        background-color: #c1c92305;
+        width: 80%;
+        height:100%;
+    }
+
+    .main {
+        background: radial-gradient(var(--b), var(--a));
+        height: 13cm;
+        border-radius: 1px;
+        width:min-content;
+    }
+
+    div::selection,span::selection,br::selection,img::selection{
+        color:none;
+        background-color: transparent;
+    }
+    #nav {
+        display: flex;
+        background-color: var(--nv);
+        height: 40px;
+        width: 302px;
+        border-radius: 3px;
+        font-size: 10px;
+    }
+
+    .img {
+        width: 15px;
+        height: 15px;
+    }
+
+    #plus {
+        width: 13px;
+        height: 13px;
+    }
+
+    #prof {
+        width: 40px;
+        height: 40px;
+    }
+
+    #settings {
+        border-radius: 100%;
+        padding: 3px;
+        background-color: var(--imgout);
+        margin-left: 5px;
+        margin-right: 5px;
+        width: 18px;
+        height: 18px;
+        border: 1px solid var(--border2);
+        margin-left: 4px;
+        margin-top: 8px;
+        .img{
+            width:17px;
+            height:17px;
+            margin:1px;
+        }
+    }
+
+    #msg {
+        border-radius: 100%;
+        padding: 3px;
+        background-color: var(--imgout);
+        margin: 5px;
+        margin-top: 8px;
+        width: 18px;
+        height: 18px;
+        border: 1px solid var(--border2);
+        .img{
+            margin:1px 1.75px;
+        }
+    }
+
+    #gap {
+        width: 7px;
+    }
+
+    .two{
+        margin-left:10px;
+        display: flex;
+        gap:10px;
+        margin-top:1.5px;
+    }
+    #gems {
+        border: 1.5px solid var(--border2);
+        border-radius: 30px;
+        margin-top: 8px;
+        margin-left: 4px;
+        height: 20px;
+        position: relative;
+        width: 60px;
+    }
+
+    #gem {
+        position: absolute;
+        top:-5.5px;
+        left:-5px;
+        filter:drop-shadow(0px 0px 3px #00f);
+        width:30px;
+        height:25px;
+    }
+
+    .gem {
+        position: absolute;
+        left: 35%;
+        top: 25%;
+    }
+
+    #plus {
+        position: absolute;
+        top: 5%;
+        width: 20px;
+        height: 20px;
+        right: 1px;
+    }
+
+    #coins {
+        border: 1.5px solid var(--border2);
+        border-radius: 30px;
+        margin-top: 8px;
+        margin-left: 4px;
+        padding-top: 5px;
+        height: 15px;
+        width: 90px;
+        position: relative;
+    }
+
+    #coin {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0px;
+        border: 1px solid #f8ab04;
+        border-radius: 100%;
+    }
+
+    .coin {
+        position: absolute;
+        left:30%;
+    }
+
+    /* nav bar finish */
+    #top {
+        display: flex;
+        font-size: 9.6px;
+        column-gap: 9px;
+        text-align: center;
+    }
+
+    #a {
+        color: #fff;
+        font-weight: 600;
+    }
+
+    #b,#time {
+        color: yellow;
+        text-transform: none;
+        font-weight: 540;
+    }
+
+    #reward,
+    #lucky,
+    #leaderboard {
+        border: 2px double var(--border2);
+        border-radius: 10px;
+        padding: 5px;
+        background: radial-gradient(var(--box2),var(--box1));
+    }
+
+    .gift {
+        width: 35px;
+        height: 35px;
+        margin-top: 10px;
+    }
+
+    #daily {
+        position: relative;
+    }
+
+    .daily {
+        width: 40px;
+        height: 50px;
+        right: 10px;
+        top: -35px;
+        position: absolute;
+    }
+
+    #logo {
+        position: relative;
+    }
+
+    .logo {
+        position: absolute;
+        top: -50px;
+        left: 85px;
+        width: 130px;
+        height: 80px;
+    }
+
+    /* mode starts */
+    #mode {
+        margin-top: 30px;
+        position: relative;
+        text-align: center;
+        font-size:12px;
+        font-weight: 700;
+        color:#fff ;
+    }
+    .modegroup{
+        border-radius: 50%;
+        padding-left:35%;
+        letter-spacing: 1px;
+    }
+    
+    #disc{
+        position: absolute;
+        top:20px;
+        left:80px;
+        width:120px;
+        height: 25px;
+        border: 3px solid var(--border2);
+        border-radius: 2px;
+        padding: 2px;
+        background: radial-gradient(var(--blue2),var(--blue1));
+    }
+    #caroom{
+        position: absolute;
+        top:60px;
+        left:80px;
+        width:120px;
+        height:25px;
+        border: 3px solid var(--border2);
+        border-radius: 2px;
+        padding: 2px;
+        background: radial-gradient(var(--green2),var(--green1));
+    }
+    #freestyle{
+        position: absolute;
+        top:100px;
+        left:80px;
+        width:120px;
+        height:25px;
+        border: 3px solid var(--border2);
+        border-radius: 2px;
+        padding: 2px;
+        background: radial-gradient(var(--orange2),var(--orange1));
+    }
+    /* chest slots */
+
+    #chests{
+        display: flex;
+        position: relative;
+        left:10%;
+        top:35%;
+        column-gap: 20px;
+    }
+    #c1,#c2,#c3,#c4{
+        font-size:10px;
+        text-align: center;
+        padding-top:20px;
+        border: 2px solid #000;
+        width:45px;
+        height:40px;
+        backdrop-filter: blur(70%);
+        box-shadow: inset 3px 3px 10px #0404047e,inset -3px -3px 10px #1010106b;
+        border-radius: 5px;
+    }
+    #chest{
+        color:#b4aa82;
+    }
+    /* bottom */
+    #bottom{
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        bottom:-220px;
+        background: var(--bot1);
+        height:10%;
+        align-items: center;
+        font-size: 12px;
+    }
+    #bot{
+        width:30px;
+        height:30px;
+    }
+    #bottom >div{
+        border: .1px solid #10101071;
+        border-collapse: collapse;
+        text-align: center;
+    }
+    .home{
+        width:40px;
+        height:30px;
+    }
+    #bottom >div:hover{
+        background: var(--bot2);
+        transform: scale(1.1);
+        transition: transform 1s ease;
+    }
+
+</style>
+<script>
+    let st=setInterval(cc, 1000)
+    x = 61
+    y = 60
+    z = 24
+    function cc() {
+        if (x >= 0) {
+            x = x - 1;
+        }
+        if (x == 0) {
+            y = y - 1;
+            x = 61;
+        }
+        if (y == 0) {
+            y = 60;
+            z--;
+        }
+        if(z==1&&y==1&&x==1){
+            clearInterval(st)
+            return 0;
+        }
+        x1=check(x-1)
+        y1=check(y-1)
+        z1=check(z-1)
+        time.innerHTML = (z1).toString() + "hrs " + (y1).toString() + "min " + (x1).toString() + "sec";
+
+    }
+    function check(c) {
+        copy=c.toString();
+        if(copy.length==1){
+            copy="0"+copy;
+        }
+        return copy;
+    }
+</script>
+</html>

@@ -1,0 +1,84 @@
+<html><head></head><html><body>
+<div id="perspective">
+<div class="rotate_div rotate">
+        <h1>RotateX</h1>
+</div>
+<div class="rotate_div1 rotate">
+        <h1>RotateY</h1>
+</div>
+<div class="rotate_div2 rotate">
+        <h1>RotateZ</h1>
+</div>
+<div class="rotate_div3 rotate">
+        <h1>RotateXYZ</h1>
+</div>
+</div>
+</body>
+<style>
+#perspective{
+    perspective:450px;
+    -webkit-perspective:450px;
+}
+.rotate {
+            margin: 60px auto;
+            width: 250px;
+            height: 100px;
+            background: #ddd;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid white;
+        }
+        
+        .rotate_div {
+            -webkit-animation: exe 2s ease-in-out 0s infinite alternate forwards;
+            border-top-color: blue;
+            border-bottom-color: brown;
+        }
+        
+        @-webkit-keyframes exe {
+            from {}
+            to {
+                -webkit-transform: rotateX(360deg)
+            }
+        }
+        
+        .rotate_div1 {
+            -webkit-animation: exe1 2s ease-in-out infinite alternate;
+            border-left-color: darkorchid;
+            border-right-color: darkcyan;
+        }
+        
+        @-webkit-keyframes exe1 {
+            from {}
+            to {
+                -webkit-transform: rotateY(360deg)
+            }
+        }
+        
+        .rotate_div2 {
+            -webkit-animation: exe2 5s ease-in-out infinite alternate;
+            border-color: blue darkcyan brown darkorchid;
+            margin-top: 100px;
+        }
+        
+        @-webkit-keyframes exe2 {
+            from {}
+            to {
+                -webkit-transform: rotateZ(4000deg)
+            }
+        }
+        .rotate_div3 {
+            -webkit-animation: exe3 1s ease-in-out infinite alternate;
+            border-color: blue darkcyan brown darkorchid;
+            margin-top: 170px;
+        }
+        
+        @-webkit-keyframes exe3 {
+            from {}
+            to {
+                -webkit-transform: rotateX(180deg) rotateY(180deg) rotateZ(50deg);
+            }
+        }</style>
+</html>

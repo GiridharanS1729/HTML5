@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <!-- <script src="script.js" defer></script> -->
+    <title>Carrom Board Game</title>
+</head>
+<body>
+    <div class="game-container">
+        <div class="carrom-board"></div>
+        <div class="coin striker"></div>
+        <div class="coin"></div>
+        <!-- <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="coin"></div> -->
+        <!-- Add more coin elements here -->
+    </div>
+</body>
+<style>
+    /* styles.css */
+    body{
+        width:300px;
+        height:300px;
+    }
+.game-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+}
+
+.carrom-board {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: brown;
+    /* Additional styling for the carrom board */
+}
+
+.coin {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    /* Additional styling for the coins */
+}
+
+.striker {
+    width: 40px;
+    height: 40px;
+    /* Additional styling for the striker */
+}
+
+</style>
+<script>
+// script.js
+const striker = document.querySelector('.striker');
+let isDragging = false;
+
+function startDragging(event) {
+    isDragging = true;
+}
+
+function moveStriker(event) {
+    if (isDragging) {
+        alert("move")
+        const x = event.clientX;
+        const y = event.clientY;
+        striker.style.left = `${x - striker.clientWidth / 2}px`;
+        striker.style.top = `${y - striker.clientHeight / 2}px`;
+    }
+}
+
+function stopDragging() {
+    isDragging = false;
+}
+
+striker.addEventListener('mousedown', startDragging);
+document.addEventListener('mousemove', moveStriker);
+document.addEventListener('mouseup', stopDragging);
+</script>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logged in</title>
+    <link rel="icon" href="top.ico">
+</head>
+
+<body>
+    <div class="main">
+        <div class="text"> Succesfully Logged in</div>
+        <span class="tick">
+            <img src="tick.png" />
+        </span>
+    </div>
+    <div class="v">
+        <a href="instagram.html">
+            <div class="log">Log with another account</div>
+        </a>
+        <a href="signup.html">
+            <div class="log">Sign up with an account</div>
+        </a>
+    </div>
+</body>
+
+<style>
+    * {
+        margin-left: 13%;
+        margin-top: 5%;
+
+    }
+
+    .main {
+
+        width: 35rem;
+        height: 15rem;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        background-color: #f1f0f0;
+        border-radius: 5%;
+        border: 1px solid #e1dede;
+        box-shadow: 0px 0px 3px 3px lavender;
+    }
+
+    .tick {
+        font-size: 1rem;
+        border-radius: 50%;
+        margin-left: -10px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: auto;
+        height: auto;
+        text-shadow: 1px 1px 5px #029f34;
+    }
+
+    img {
+        animation: t 1s linear 1;
+        width: 100px;
+        height: 80px;
+        border-radius: 100%;
+    }
+
+    .text {
+        display: inline-block;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 3rem;
+        cursor: default;
+        margin-left: 0px;
+        text-shadow: 1px 1px 5px #ffff55;
+    }
+
+    @keyframes t {
+
+        0%,
+        90% {
+            display: none;
+            transform: rotate(0deg);
+            width: 0px;
+            height: 0px;
+        }
+
+        100% {
+            display: block;
+            width: 100px;
+            height: 80px;
+            transform: rotate(360deg);
+        }
+    }
+
+    .log {
+        color: #fff;
+        background-color: rgb(53, 53, 255);
+        width: 13rem;
+        height: 1.3rem;
+        padding: 3px;
+
+        border-radius: 10px;
+        font-size: 20px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .v{
+        display: inline-flex;
+        
+    }
+</style>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader</title>
+</head>
+
+<body>
+    <div class="a">
+        <div class="b"></div><span class="c">Loading</span>
+    </div>
+</body>
+<style>
+    .a {
+        width: 170px;
+        height: 220px;
+        background-color: rgb(54, 52, 52);
+        padding-top: 85px;
+        padding-left: 80px;
+        border-radius: 2%;
+        box-sizing: content-box;
+    }
+
+    .b {
+        width: 100px;
+        height: 100px;
+        border: 5px solid #8d8686;
+        border-radius: 50%;
+        border-top-color: rgb(206, 200, 192);
+        animation: s 2s linear infinite;
+    }
+
+    @keyframes s {
+        0%{
+            filter: drop-shadow(0px 0px 1px rgb(139, 139, 139));
+            transform: rotatez(0deg);
+
+        }
+
+        100%{
+            filter: drop-shadow(0px 0px 0px rgb(140, 140, 140));
+            transform: rotatez(360deg);
+
+        }
+        50% {
+            filter: drop-shadow(0px 0px 5px rgb(148, 147, 147));
+            transform: rotatez(180deg);
+        }
+    }
+</style>
+
+</html>
